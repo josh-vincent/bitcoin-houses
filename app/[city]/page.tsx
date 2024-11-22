@@ -71,7 +71,6 @@ export default async function CityPage({ params }: Props) {
 
   return (
     <div className="space-y-8">
-      <AdUnit slot={'slot'}/>
       <div className="flex justify-between items-center">
         <h1 className="text-4xl font-bold tracking-tight">
           {city.charAt(0).toUpperCase() + city.slice(1)} Market
