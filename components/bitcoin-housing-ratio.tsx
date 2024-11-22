@@ -163,9 +163,7 @@ export function BitcoinHousingRatio({
                   dataKey="date"
                   tickFormatter={(value) => {
                     const date = new Date(value);
-                    return viewType === "monthly"
-                      ? `${date.toLocaleString('default', { month: 'short' })} ${date.getFullYear()}`
-                      : date.getFullYear().toString();
+                    return `${date.toLocaleString('default', { month: 'short' })} ${date.getFullYear()}`
                   }}
                 />
                 <YAxis 
@@ -177,9 +175,8 @@ export function BitcoinHousingRatio({
                   formatter={(value: number) => [`${value.toFixed(2)} BTC`, "BTC/House Ratio"]}
                   labelFormatter={(label) => {
                     const date = new Date(label);
-                    return viewType === "monthly"
-                      ? date.toLocaleDateString('default', { month: 'long', year: 'numeric' })
-                      : date.getFullYear().toString();
+                    return date.toLocaleDateString('default', { month: 'long', year: 'numeric' })
+                      
                   }}
                 />
                 <Area

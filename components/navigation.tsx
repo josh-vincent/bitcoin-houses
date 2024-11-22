@@ -26,7 +26,7 @@ export function Navigation() {
 
         <div className="md:hidden flex items-center">
           <ModeToggle />
-          <DropdownMenu>
+          {/* <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="h-5 w-5" />
@@ -43,7 +43,7 @@ export function Navigation() {
                 <Link href="/education">Learn</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> */}
         </div>
       </div>
     </header>

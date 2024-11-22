@@ -31,10 +31,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const housePrice = currentPrices[city].toLocaleString();
 
   return {
-    title: `${cityName} Bitcoin vs Housing Market Analysis`,
+    title: `Bitcoin vs ${cityName} Housing Market Analysis`,
     description: `Compare Bitcoin performance against ${cityName}'s housing market. Current median house price: $${housePrice}. Track historical trends and calculate property affordability.`,
     openGraph: {
-      title: `${cityName} Bitcoin vs Housing Market Analysis`,
+      title: `Bitcoin vs ${cityName} Housing Market Analysis`,
       description: `Compare Bitcoin performance against ${cityName}'s housing market. Current median house price: $${housePrice}. Track historical trends and calculate property affordability.`,
       images: [{
         url: '/share-image.png',
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${cityName} Bitcoin vs Housing Market Analysis`,
+      title: `Bitcoin vs ${cityName} Housing Market Analysis`,
       description: `Compare Bitcoin performance against ${cityName}'s housing market. Current median house price: $${housePrice}. Track historical trends and calculate property affordability.`,
       images: ['/share-image.png'],
       creator: '@btchousing',

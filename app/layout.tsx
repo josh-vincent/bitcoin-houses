@@ -8,7 +8,7 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://btc-housing.com'),
+  metadataBase: new URL('https://swapcrypto.com.au'),
   title: {
     default: 'Bitcoin vs Australian Housing | Market Comparison Platform',
     template: '%s | Bitcoin vs Australian Housing'
@@ -26,23 +26,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_AU',
-    url: 'https://btc-housing.com',
+    url: 'https://swapcrypto.com.au',
     siteName: 'Bitcoin vs Australian Housing',
     title: 'Bitcoin vs Australian Housing | Market Comparison Platform',
     description: 'Compare Bitcoin performance with Australian house prices in real-time. Track historical trends and calculate property affordability across major cities.',
-    images: [{
-      url: 'https://cdn.discordapp.com/attachments/1144104184166236220/1309028459007180820/totheclouds_A_cartoon_illustration_of_a_Bitcoin_symbol_destroyi_449e4c8d-a896-47de-abb3-4b36915f6f3f.png',
-      width: 1200,
-      height: 630,
-      alt: 'Bitcoin vs Australian Housing Market Comparison'
-    }],
+    images: [
+      {
+        url: `/og-image.png`, // Public path for the image
+        width: 1200,
+        height: 630,
+        alt: `Bitcoin vs Australian Housing Market Comparison`,
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Bitcoin vs Australian Housing | Market Comparison Platform',
-    description: 'Compare Bitcoin performance with Australian house prices in real-time. Track historical trends and calculate property affordability across major cities.',
-    images: ['https://cdn.discordapp.com/attachments/1144104184166236220/1309028459007180820/totheclouds_A_cartoon_illustration_of_a_Bitcoin_symbol_destroyi_449e4c8d-a896-47de-abb3-4b36915f6f3f.png'],
-    creator: '@btchousing',
+    card: "summary_large_image",
+    title: `Bitcoin vs Australian Housing Market Analysis`,
+    description: `Compare Bitcoin performance against Australia's housing market. Track historical trends and calculate property affordability.`,
+    images: [`/og-image.png`],
   },
   robots: {
     index: true,

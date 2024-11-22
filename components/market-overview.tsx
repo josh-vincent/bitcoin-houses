@@ -188,16 +188,21 @@ export function MarketOverview({
                   dataKey="date"
                   tickFormatter={(value) => {
                     const date = new Date(value);
-                    return viewType === "monthly"
-                      ? `${date.toLocaleString('default', { month: 'short' })} ${date.getFullYear()}`
-                      : date.getFullYear().toString();
+                    return `${date.toLocaleString('default', { month: 'short' })} ${date.getFullYear()}`
                   }}
                   minTickGap={30}
                 />
                 <YAxis 
                   scale={useLogScale ? "log" : "linear"}
                   domain={useLogScale ? ["auto", 0] : ['auto', 0]}
-                  tickFormatter={(value) => `$${(value/1000).toFixed(0)}k`}
+                  tickFormatter={(value) => {
+                    if (value >= 1000000) {
+                      return `$${(value / 1000000).toFixed(1)}M`; // Format as millions
+                    } else if (value >= 1000) {
+                      return `$${(value / 1000).toFixed(0)}k`; // Format as thousands
+                    }
+                    return value.toString(); // Return the original value for smaller numbers
+                  }}
                 />
                 <Tooltip
                   formatter={(value: number, name: string) => [
@@ -206,9 +211,7 @@ export function MarketOverview({
                   ]}
                   labelFormatter={(label) => {
                     const date = new Date(label);
-                    return viewType === "monthly"
-                      ? date.toLocaleDateString('default', { month: 'long', year: 'numeric' })
-                      : date.getFullYear().toString();
+                    return date.toLocaleDateString('default', { month: 'long', year: 'numeric' })
                   }}
                 />
                 <Area
