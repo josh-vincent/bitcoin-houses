@@ -12,6 +12,7 @@ import {
   getHousePriceHistory,
   type City 
 } from "@/lib/api";
+import { AdUnit } from "@/components/ads/ad-unit";
 
 interface Props {
   params: {
@@ -70,12 +71,14 @@ export default async function CityPage({ params }: Props) {
 
   return (
     <div className="space-y-8">
+      <AdUnit slot={'slot'}/>
       <div className="flex justify-between items-center">
         <h1 className="text-4xl font-bold tracking-tight">
           {city.charAt(0).toUpperCase() + city.slice(1)} Market
         </h1>
         <CityNav currentCity={city} />
       </div>
+
 
       <div className="grid gap-8 grid-cols-1 lg:grid-cols-3">
         <div className="lg:col-span-2">
