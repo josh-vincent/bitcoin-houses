@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: 'Compare Bitcoin performance with Australian house prices in real-time. Track historical trends and calculate property affordability across major cities.',
     images: [
       {
-        url: `/og-image.png`, // Public path for the image
+        url: `og-image.png`, // Public path for the image
         width: 1200,
         height: 630,
         alt: `Bitcoin vs Australian Housing Market Comparison`,
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `Bitcoin vs Australian Housing Market Analysis`,
     description: `Compare Bitcoin performance against Australia's housing market. Track historical trends and calculate property affordability.`,
-    images: [`/og-image.png`],
+    images: [`og-image.png`],
   },
   robots: {
     index: true,
@@ -114,7 +114,7 @@ export default function RootLayout({
         <Providers>
           <div className="min-h-screen bg-background">
             <Navigation />
-            <main className="container mx-auto px-4 py-8">
+            <main className="container mx-auto md:px-4 py-8">
               {children}
             </main>
           </div>

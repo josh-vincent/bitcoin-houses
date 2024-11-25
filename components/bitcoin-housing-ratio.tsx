@@ -160,6 +160,7 @@ export function BitcoinHousingRatio({
                   </linearGradient>
                 </defs>
                 <XAxis 
+                  
                   dataKey="date"
                   tickFormatter={(value) => {
                     const date = new Date(value);

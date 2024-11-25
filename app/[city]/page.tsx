@@ -72,14 +72,14 @@ export default async function CityPage({ params }: Props) {
   return (
     <div className="space-y-8">
       <div className="flex justify-between items-center">
-        <h1 className="text-4xl font-bold tracking-tight">
+        <h1 className="text-4xl font-bold tracking-tight px-4">
           {city.charAt(0).toUpperCase() + city.slice(1)} Market
         </h1>
         <CityNav currentCity={city} />
       </div>
 
 
-      <div className="grid gap-8 grid-cols-1 lg:grid-cols-3">
+      <div className="grid gap-2 grid-cols-1 lg:grid-cols-3">
         <div className="lg:col-span-2">
           <BitcoinHousingRatio 
             city={city}
