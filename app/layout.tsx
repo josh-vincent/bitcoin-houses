@@ -92,7 +92,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <link rel="manifest" href="/site.webmanifest" />
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-PG9N1KCQEQ`}
+          src={`https://www.googletagmanager.com/gtag/js?id=GTM-W24W38WV`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -100,7 +100,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-PG9N1KCQEQ');
+            gtag('config', 'GTM-W24W38WV');
           `}
         </Script>
         <Script

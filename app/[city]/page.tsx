@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function CityPage({ params }: Props) {
-  // Validate city parameter
+  // Validate city parameter[[]]
   if (!Object.keys(HOUSE_PRICES_HISTORY).includes(params.city)) {
     notFound();
   }
